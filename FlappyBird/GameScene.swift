@@ -13,10 +13,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	var pajaro = SKSpriteNode()
 	var colorCierlo = SKColor()
-	var texturaTuboAbajo = SKTexture() // 1
-	var texturaTuboArriba = SKTexture() // 2
-	var separacionTubos = 0.0 // 180.0 //
-	var velocidadTubo: Float = 0.008 // NUEVOOOOOOOOOOOOOOO
+	var texturaTuboAbajo = SKTexture()
+	var texturaTuboArriba = SKTexture()
+	var separacionTubos = Double()
+	var velocidadTubo: Float = 0.008
 	var controlTubo = SKAction()
 	
 	let categoriaPajaro: UInt32 = 1 << 0
@@ -24,16 +24,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	let categoriaTubos: UInt32 = 1 << 2
 	let categoriaAvance: UInt32 = 1 << 3
 	
-	var movimiento = SKNode() // Nodo que englobará a todo el escenario y pájaro
+	var movimiento = SKNode()
 	var reset = false
-	
+	var muerto = false
+	var musicaReproduciendose = false
 	var adminTubos = SKNode()
 	
-	var puntuacion = NSInteger() // 0 ?
+	var puntuacion = NSInteger()
 	var puntuacionLabel = SKLabelNode()
 	
-	
-	// MÚSICA !!!
 	var musicaFondo : AVAudioPlayer?
 	var audioPasaTubo : AVAudioPlayer?
 	
@@ -41,13 +40,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	// ENTORNO
     override func didMoveToView(view: SKView) {
 	
-		if let musicaFondo = self.setupAudioPlayerWithFile("Suspenseful and Victorious Underscore", type:"mp3") {
+		// Música
+		if let musicaFondo = self.setupAudioPlayerWithFile("bensound-littleidea", type:"mp3") {
 			self.musicaFondo = musicaFondo
 		}
-		musicaFondo?.volume = 0.07
+		musicaFondo?.volume = 0.06
 		musicaFondo?.play()
 		
-		/////
 		
 		self.addChild(movimiento)
 		movimiento.addChild(adminTubos)
@@ -72,7 +71,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		let vuelo = SKAction.repeatActionForever(animacionAleteo)
 		
 		pajaro = SKSpriteNode(texture: texturaPajaro1)
-		//pajaro.position = CGPoint(x: self.frame.size.width / 2.8, y: CGRectGetMidY(self.frame))
 		pajaro.position = CGPoint(x: self.frame.size.width / 2.8, y: self.frame.size.height)
 		
 		pajaro.runAction(vuelo)
@@ -150,7 +148,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		let distanciaMovimiento = CGFloat(self.frame.size.width + (texturaTuboAbajo.size().width * 2))
 		let movimientoTubo = SKAction.moveByX(-distanciaMovimiento, y: 0, duration: NSTimeInterval(CGFloat(velocidadTubo) * distanciaMovimiento))
 		let eliminarTubo = SKAction.removeFromParent()
-		controlTubo = SKAction.sequence([movimientoTubo,eliminarTubo]) //
+		controlTubo = SKAction.sequence([movimientoTubo,eliminarTubo])
 		
 		let crearTubo = SKAction.runBlock({() in self.gestionTubos()})
 		let retardo = SKAction.waitForDuration(2.0) //
@@ -161,7 +159,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		
 		puntuacion = 0
 		puntuacionLabel.fontName = "Arial"
-		puntuacionLabel.fontSize = 100
+		puntuacionLabel.fontSize = 90
 		puntuacionLabel.alpha = 0.4
 		puntuacionLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) * 1.7) // 220?
 		puntuacionLabel.zPosition = 0
@@ -177,7 +175,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		conjuntoTubo.zPosition = -98
 		
 		let altura = UInt(self.frame.size.height / 3)
-		let y = UInt(arc4random()) % altura // altura aleatoria
+		let y = UInt(arc4random()) % altura
 		
 		// Tubo abajo
 		let tuboAbajo = SKSpriteNode(texture: texturaTuboAbajo)
@@ -201,9 +199,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		conjuntoTubo.addChild(tuboArriba)
 		
 		let avance = SKNode()
-		avance.position = CGPointMake(tuboAbajo.size.width, CGRectGetMidY(self.frame)) // avance.position = CGPointMake(tuboAbajo.size.width + pajaro.size.width/2, CGRectGetMidX(self.frame))
+		avance.position = CGPointMake(tuboAbajo.size.width, CGRectGetMidY(self.frame))
 		avance.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(tuboAbajo.size.width, self.frame.size.height))
-		avance.physicsBody?.dynamic = false //
+		avance.physicsBody?.dynamic = false
 		avance.physicsBody?.categoryBitMask = categoriaAvance
 		avance.physicsBody?.contactTestBitMask = categoriaPajaro
 		
@@ -212,9 +210,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		conjuntoTubo.runAction(controlTubo)
 		
 		adminTubos.addChild(conjuntoTubo)
-
 	}
-	
 	
 	// TOQUES DE PANTALLA
 	func reiniciarEscena(){
@@ -233,19 +229,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		// Reinicia puntuación
 		puntuacion = 0
 		puntuacionLabel.text = "\(puntuacion)"
-		separacionTubos = Double(self.frame.size.height/5) // 180.0
-		velocidadTubo = 0.008 // NUEVOOOOOOOO
+		separacionTubos = Double(self.frame.size.height/5)
+		velocidadTubo = 0.008
+		muerto = false
 	}
 	
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
 		
-		if !(musicaFondo?.playing)!{
+		if muerto && musicaReproduciendose {
 			musicaFondo?.play()
 		}
 		
 		if movimiento.speed > 0{
 			pajaro.physicsBody?.velocity = CGVectorMake(0, 0)
-			pajaro.physicsBody?.applyImpulse(CGVectorMake(0, 12)) // 6 era muy poco?
+			pajaro.physicsBody?.applyImpulse(CGVectorMake(0, 12))
 		}
 		else if reset {
 			self.reiniciarEscena()
@@ -288,11 +285,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 					separacionTubos -= Double(pajaro.size.height)*0.15
 				}
 
-				velocidadTubo -= 0.00015 //
+				velocidadTubo -= 0.00015
 				
 				let distanciaMovimiento = CGFloat(self.frame.size.width + (texturaTuboAbajo.size().width * 2))
 				let movimientoTubo = SKAction.moveByX(-distanciaMovimiento, y: 0, duration: NSTimeInterval(CGFloat(velocidadTubo) * distanciaMovimiento))
-				controlTubo = SKAction.sequence([movimientoTubo,SKAction.removeFromParent()]) //
+				controlTubo = SKAction.sequence([movimientoTubo,SKAction.removeFromParent()])
 				
 				// Sonido al pasar por tubería
 				
@@ -303,11 +300,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				audioPasaTubo?.play()
 			}
 			else {
+				musicaReproduciendose = (musicaFondo?.playing)!
+				muerto = true
 				musicaFondo?.stop()
 				
 				movimiento.speed = 0
 				let resetJuego = SKAction.runBlock({() in self.resetGame()})
-				let cambiarCieloRojo = SKAction.runBlock({() in self.ponerCieloRojo()})
+				let cambiarCieloRojo = SKAction.runBlock({self.backgroundColor = UIColor.redColor()})
 				
 				let conjuntoGameOver = SKAction.group([cambiarCieloRojo,resetJuego])
 				self.runAction(conjuntoGameOver)
@@ -321,19 +320,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		reset = true
 	}
 	
-	func ponerCieloRojo(){
-		self.backgroundColor = UIColor.redColor()
-	}
-	
-	func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer?  {
-		//1
+	func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer? {
+
 		let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
 		let url = NSURL.fileURLWithPath(path!)
 		
-		//2
 		var audioPlayer:AVAudioPlayer?
 		
-		// 3
 		do {
 			try audioPlayer = AVAudioPlayer(contentsOfURL: url)
 		} catch {

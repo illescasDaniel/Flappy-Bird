@@ -10,25 +10,33 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
+	
+	
+	@IBOutlet weak var mySwitch: UISwitch!
+	
+	let scene = GameScene(fileNamed:"GameScene")
+	var skView = SKView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let scene = GameScene(fileNamed:"GameScene") {
+       // if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.
-            let skView = self.view as! SKView
-            skView.showsFPS = true
+            //let skView = self.view as! SKView
+			skView = self.view as! SKView
+            skView.showsFPS = false
             skView.showsNodeCount = false
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
+            scene!.scaleMode = .AspectFill
             
             skView.presentScene(scene)
-        }
+       // }
     }
+	
 
     override func shouldAutorotate() -> Bool {
         return true
@@ -50,4 +58,29 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+	
+	@IBAction func play(sender: UIButton) {
+		skView.paused = false
+		scene?.musicaFondo!.play()
+	}
+	
+	@IBAction func Pause(sender: UIButton) {
+		skView.paused = true
+		scene?.musicaFondo!.stop()
+	}
+	
+	@IBAction func restart(sender: UIButton) {
+		scene?.reiniciarEscena()
+	}
+	
+	@IBAction func mute(sender: AnyObject) {
+		
+		if mySwitch.on {
+			scene?.musicaFondo!.play()
+		}
+		else{
+			scene?.musicaFondo!.stop()
+		}
+	}
+	
 }
