@@ -16,6 +16,12 @@
 		651306701D23DF5F00E539EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6513066E1D23DF5F00E539EE /* LaunchScreen.storyboard */; };
 		6513067B1D23DF5F00E539EE /* FlappyBirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6513067A1D23DF5F00E539EE /* FlappyBirdTests.swift */; };
 		651306861D23DF5F00E539EE /* FlappyBirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306851D23DF5F00E539EE /* FlappyBirdUITests.swift */; };
+		657C5E861D23E4A4005CF4A5 /* Bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E801D23E4A4005CF4A5 /* Bird1.png */; };
+		657C5E871D23E4A4005CF4A5 /* Bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E811D23E4A4005CF4A5 /* Bird2.png */; };
+		657C5E881D23E4A4005CF4A5 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E821D23E4A4005CF4A5 /* Ground.png */; };
+		657C5E8B1D23E4A4005CF4A5 /* Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E851D23E4A4005CF4A5 /* Sky.png */; };
+		657C5E921D240A99005CF4A5 /* pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E901D240A99005CF4A5 /* pipe1.png */; };
+		657C5E931D240A99005CF4A5 /* pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E911D240A99005CF4A5 /* pipe2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		651306811D23DF5F00E539EE /* FlappyBirdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyBirdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		651306851D23DF5F00E539EE /* FlappyBirdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyBirdUITests.swift; sourceTree = "<group>"; };
 		651306871D23DF5F00E539EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		657C5E801D23E4A4005CF4A5 /* Bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird1.png; sourceTree = "<group>"; };
+		657C5E811D23E4A4005CF4A5 /* Bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird2.png; sourceTree = "<group>"; };
+		657C5E821D23E4A4005CF4A5 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ground.png; sourceTree = "<group>"; };
+		657C5E851D23E4A4005CF4A5 /* Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sky.png; sourceTree = "<group>"; };
+		657C5E901D240A99005CF4A5 /* pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe1.png; sourceTree = "<group>"; };
+		657C5E911D240A99005CF4A5 /* pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		651306601D23DF5F00E539EE /* FlappyBird */ = {
 			isa = PBXGroup;
 			children = (
+				657C5E7F1D23E4A4005CF4A5 /* Imágenes */,
 				651306611D23DF5F00E539EE /* AppDelegate.swift */,
 				651306631D23DF5F00E539EE /* GameScene.sks */,
 				651306651D23DF5F00E539EE /* GameScene.swift */,
@@ -129,6 +142,19 @@
 				651306871D23DF5F00E539EE /* Info.plist */,
 			);
 			path = FlappyBirdUITests;
+			sourceTree = "<group>";
+		};
+		657C5E7F1D23E4A4005CF4A5 /* Imágenes */ = {
+			isa = PBXGroup;
+			children = (
+				657C5E901D240A99005CF4A5 /* pipe1.png */,
+				657C5E911D240A99005CF4A5 /* pipe2.png */,
+				657C5E801D23E4A4005CF4A5 /* Bird1.png */,
+				657C5E811D23E4A4005CF4A5 /* Bird2.png */,
+				657C5E821D23E4A4005CF4A5 /* Ground.png */,
+				657C5E851D23E4A4005CF4A5 /* Sky.png */,
+			);
+			path = "Imágenes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +225,7 @@
 				TargetAttributes = {
 					6513065D1D23DF5E00E539EE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = PRK6268SLD;
 					};
 					651306751D23DF5F00E539EE = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -236,9 +263,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				651306641D23DF5F00E539EE /* GameScene.sks in Resources */,
+				657C5E871D23E4A4005CF4A5 /* Bird2.png in Resources */,
 				651306701D23DF5F00E539EE /* LaunchScreen.storyboard in Resources */,
 				6513066D1D23DF5F00E539EE /* Assets.xcassets in Resources */,
+				657C5E931D240A99005CF4A5 /* pipe2.png in Resources */,
+				657C5E861D23E4A4005CF4A5 /* Bird1.png in Resources */,
+				657C5E921D240A99005CF4A5 /* pipe1.png in Resources */,
 				6513066B1D23DF5F00E539EE /* Main.storyboard in Resources */,
+				657C5E881D23E4A4005CF4A5 /* Ground.png in Resources */,
+				657C5E8B1D23E4A4005CF4A5 /* Sky.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,10 +442,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlappyBird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -420,10 +456,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlappyBird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -494,6 +533,7 @@
 				6513068C1D23DF5F00E539EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6513068D1D23DF5F00E539EE /* Build configuration list for PBXNativeTarget "FlappyBirdTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +542,7 @@
 				6513068F1D23DF5F00E539EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		651306901D23DF5F00E539EE /* Build configuration list for PBXNativeTarget "FlappyBirdUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +551,7 @@
 				651306921D23DF5F00E539EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
