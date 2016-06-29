@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
 	
@@ -31,8 +32,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	var puntuacion = NSInteger() // 0 ?
 	var puntuacionLabel = SKLabelNode()
 	
+	
+	// MÚSICA !!!
+	var musicaFondo : AVAudioPlayer?
+	var audioPasaTubo : AVAudioPlayer?
+	
+	
 	// ENTORNO
     override func didMoveToView(view: SKView) {
+	
+		if let musicaFondo = self.setupAudioPlayerWithFile("Suspenseful and Victorious Underscore", type:"mp3") {
+			self.musicaFondo = musicaFondo
+		}
+		musicaFondo?.volume = 0.07
+		musicaFondo?.play()
+		
+		/////
 		
 		self.addChild(movimiento)
 		movimiento.addChild(adminTubos)
@@ -57,7 +72,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		let vuelo = SKAction.repeatActionForever(animacionAleteo)
 		
 		pajaro = SKSpriteNode(texture: texturaPajaro1)
-		pajaro.position = CGPoint(x: self.frame.size.width / 2.8, y: CGRectGetMidY(self.frame))
+		//pajaro.position = CGPoint(x: self.frame.size.width / 2.8, y: CGRectGetMidY(self.frame))
+		pajaro.position = CGPoint(x: self.frame.size.width / 2.8, y: self.frame.size.height)
 		
 		pajaro.runAction(vuelo)
 		
@@ -202,7 +218,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	// TOQUES DE PANTALLA
 	func reiniciarEscena(){
-		pajaro.position = CGPoint(x: self.frame.size.width / 2.8, y: CGRectGetMidY(self.frame))
+		pajaro.position = CGPoint(x: self.frame.size.width / 2.8, y: CGRectGetMidY(self.frame)*1.5)
 		pajaro.physicsBody?.velocity = CGVectorMake(0,0)
 		pajaro.speed = 0
 		pajaro.zRotation = 0
@@ -222,6 +238,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	}
 	
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+		
+		if !(musicaFondo?.playing)!{
+			musicaFondo?.play()
+		}
 		
 		if movimiento.speed > 0{
 			pajaro.physicsBody?.velocity = CGVectorMake(0, 0)
@@ -253,7 +273,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		pajaro.zRotation = self.rotacion(-1, max: 0.5, valor: (pajaro.physicsBody?.velocity.dy)! * ((pajaro.physicsBody?.velocity.dy)! < 0 ? 0.003 : 0.001))
     }
 	
-	// COLISIONES
+	// CONTACTOS
 	func didBeginContact(contact: SKPhysicsContact) {
 		
 		if movimiento.speed > 0{
@@ -262,18 +282,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				puntuacion += 1
 				puntuacionLabel.text = "\(puntuacion)"
 				
+				// Aumenta dificultad
+				
 				if separacionTubos > Double(pajaro.size.height)*4.52{
 					separacionTubos -= Double(pajaro.size.height)*0.15
 				}
 
-				// BETA!
 				velocidadTubo -= 0.00015 //
 				
 				let distanciaMovimiento = CGFloat(self.frame.size.width + (texturaTuboAbajo.size().width * 2))
 				let movimientoTubo = SKAction.moveByX(-distanciaMovimiento, y: 0, duration: NSTimeInterval(CGFloat(velocidadTubo) * distanciaMovimiento))
 				controlTubo = SKAction.sequence([movimientoTubo,SKAction.removeFromParent()]) //
+				
+				// Sonido al pasar por tubería
+				
+				if let audioPasaTubo = self.setupAudioPlayerWithFile("collectcoin", type:"wav") {
+					self.audioPasaTubo = audioPasaTubo
+				}
+				audioPasaTubo?.volume = 0.2
+				audioPasaTubo?.play()
 			}
 			else {
+				musicaFondo?.stop()
+				
 				movimiento.speed = 0
 				let resetJuego = SKAction.runBlock({() in self.resetGame()})
 				let cambiarCieloRojo = SKAction.runBlock({() in self.ponerCieloRojo()})
@@ -292,6 +323,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	func ponerCieloRojo(){
 		self.backgroundColor = UIColor.redColor()
+	}
+	
+	func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer?  {
+		//1
+		let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
+		let url = NSURL.fileURLWithPath(path!)
+		
+		//2
+		var audioPlayer:AVAudioPlayer?
+		
+		// 3
+		do {
+			try audioPlayer = AVAudioPlayer(contentsOfURL: url)
+		} catch {
+			print("Player not available")
+		}
+		
+		return audioPlayer
 	}
 	
 }
