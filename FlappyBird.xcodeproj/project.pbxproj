@@ -16,7 +16,6 @@
 		651306861D23DF5F00E539EE /* FlappyBirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306851D23DF5F00E539EE /* FlappyBirdUITests.swift */; };
 		6540BF081D245B80006B8CBE /* bensound-littleidea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6540BF071D245B80006B8CBE /* bensound-littleidea.mp3 */; };
 		6540BF0A1D2475FC006B8CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6540BF091D2475FC006B8CBE /* Assets.xcassets */; };
-		6540BF0C1D247759006B8CBE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6540BF0B1D247759006B8CBE /* README.md */; };
 		657C5E861D23E4A4005CF4A5 /* Bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E801D23E4A4005CF4A5 /* Bird1.png */; };
 		657C5E871D23E4A4005CF4A5 /* Bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E811D23E4A4005CF4A5 /* Bird2.png */; };
 		657C5E881D23E4A4005CF4A5 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E821D23E4A4005CF4A5 /* Ground.png */; };
@@ -337,7 +336,6 @@
 			files = (
 				651306661D23DF5F00E539EE /* GameScene.swift in Sources */,
 				651306681D23DF5F00E539EE /* GameViewController.swift in Sources */,
-				6540BF0C1D247759006B8CBE /* README.md in Sources */,
 				651306621D23DF5F00E539EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

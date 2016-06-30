@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
 	
 	let scene = GameScene(fileNamed:"GameScene")
 	var skView = SKView()
+	var paused = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,14 +57,18 @@ class GameViewController: UIViewController {
         return true
     }
 	
-	@IBAction func play(sender: UIButton) {
-		skView.paused = false
-		scene?.musicaFondo!.play()
-	}
-	
 	@IBAction func Pause(sender: UIButton) {
-		skView.paused = true
-		scene?.musicaFondo!.stop()
+		
+		if paused==1 {
+			skView.paused = false
+			scene?.musicaFondo!.play()
+		}
+		else{
+			skView.paused = true
+			scene?.musicaFondo!.stop()
+		}
+		
+		paused = (paused + 1) % 2
 	}
 	
 	@IBAction func restart(sender: UIButton) {

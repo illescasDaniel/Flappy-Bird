@@ -17,28 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsq-SK-VtI">
-                                <rect key="frame" x="78" y="9" width="50" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="🔄"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="276" y="15" width="33" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="restart:" destination="BV1-FR-VrT" eventType="touchUpInside" id="dxT-Lo-fVd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8t-J6-jMl">
-                                <rect key="frame" x="28" y="34" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="▶️"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="15" width="32" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="play:" destination="BV1-FR-VrT" eventType="touchUpInside" id="7iQ-lr-ZRp"/>
-                                </connections>
-                            </button>
                             <switch opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQh-OL-hsY">
                                 <rect key="frame" x="20" y="511" width="51" height="31"/>
                                 <color key="onTintColor" red="0.4419986776202528" green="0.76672202290847935" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,18 +29,42 @@
                             </switch>
                             <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWe-d0-xRu">
                                 <rect key="frame" x="22" y="9" width="42" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="⏸"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="⏯"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="13" y="15" width="34" height="30"/>
+                                    <rect key="frame" x="20" y="4" width="37" height="51"/>
                                 </variation>
                                 <connections>
                                     <action selector="Pause:" destination="BV1-FR-VrT" eventType="touchUpInside" id="nIf-aN-Ph9"/>
                                     <action selector="paused:" destination="BV1-FR-VrT" eventType="valueChanged" id="rGd-8b-amY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsq-SK-VtI">
+                                <rect key="frame" x="78" y="9" width="50" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="🔄"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="276" y="13" width="36" height="32"/>
+                                </variation>
+                                <connections>
+                                    <action selector="restart:" destination="BV1-FR-VrT" eventType="touchUpInside" id="dxT-Lo-fVd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8t-J6-jMl">
+                                <rect key="frame" x="28" y="34" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="▶️"/>
+                                <connections>
+                                    <action selector="play:" destination="BV1-FR-VrT" eventType="touchUpInside" id="7iQ-lr-ZRp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="d8t-J6-jMl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="mySwitch" destination="XQh-OL-hsY" id="lUJ-HE-cQ0"/>
@@ -70,6 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="225" y="403.5"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
