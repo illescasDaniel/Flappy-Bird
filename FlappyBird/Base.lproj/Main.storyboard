@@ -20,9 +20,6 @@
                             <switch opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQh-OL-hsY">
                                 <rect key="frame" x="20" y="511" width="51" height="31"/>
                                 <color key="onTintColor" red="0.4419986776202528" green="0.76672202290847935" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="515" width="51" height="31"/>
-                                </variation>
                                 <connections>
                                     <action selector="mute:" destination="BV1-FR-VrT" eventType="valueChanged" id="F9L-Lc-qFh"/>
                                 </connections>
@@ -31,9 +28,6 @@
                                 <rect key="frame" x="22" y="9" width="42" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="⏯"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="4" width="37" height="51"/>
-                                </variation>
                                 <connections>
                                     <action selector="Pause:" destination="BV1-FR-VrT" eventType="touchUpInside" id="nIf-aN-Ph9"/>
                                     <action selector="paused:" destination="BV1-FR-VrT" eventType="valueChanged" id="rGd-8b-amY"/>
@@ -43,26 +37,38 @@
                                 <rect key="frame" x="78" y="9" width="50" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="🔄"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="276" y="13" width="36" height="32"/>
-                                </variation>
                                 <connections>
                                     <action selector="restart:" destination="BV1-FR-VrT" eventType="touchUpInside" id="dxT-Lo-fVd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8t-J6-jMl">
-                                <rect key="frame" x="28" y="34" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="▶️"/>
-                                <connections>
-                                    <action selector="play:" destination="BV1-FR-VrT" eventType="touchUpInside" id="7iQ-lr-ZRp"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zsq-SK-VtI" secondAttribute="trailing" constant="20" id="FJX-Ku-2ra"/>
+                            <constraint firstAttribute="bottom" secondItem="XQh-OL-hsY" secondAttribute="bottom" constant="30" id="Jc0-1t-uqL"/>
+                            <constraint firstItem="zsq-SK-VtI" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" constant="20" id="Sm5-U8-bfX"/>
+                            <constraint firstItem="XQh-OL-hsY" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="30" id="bse-T4-I6a"/>
+                            <constraint firstItem="kWe-d0-xRu" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" constant="20" id="ciJ-nS-3Th"/>
+                            <constraint firstItem="kWe-d0-xRu" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="20" id="qMN-vV-Ubc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FJX-Ku-2ra"/>
+                                <exclude reference="Sm5-U8-bfX"/>
+                                <exclude reference="ciJ-nS-3Th"/>
+                                <exclude reference="qMN-vV-Ubc"/>
+                                <exclude reference="Jc0-1t-uqL"/>
+                                <exclude reference="bse-T4-I6a"/>
+                            </mask>
+                        </variation>
                         <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <exclude reference="d8t-J6-jMl"/>
+                            <mask key="constraints">
+                                <include reference="FJX-Ku-2ra"/>
+                                <include reference="Sm5-U8-bfX"/>
+                                <include reference="ciJ-nS-3Th"/>
+                                <include reference="qMN-vV-Ubc"/>
+                                <include reference="Jc0-1t-uqL"/>
+                                <include reference="bse-T4-I6a"/>
                             </mask>
                         </variation>
                     </view>
