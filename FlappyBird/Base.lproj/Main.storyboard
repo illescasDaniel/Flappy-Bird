@@ -17,14 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQh-OL-hsY">
+                            <switch opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQh-OL-hsY">
                                 <rect key="frame" x="20" y="511" width="51" height="31"/>
                                 <color key="onTintColor" red="0.4419986776202528" green="0.76672202290847935" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="mute:" destination="BV1-FR-VrT" eventType="valueChanged" id="F9L-Lc-qFh"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWe-d0-xRu">
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWe-d0-xRu">
                                 <rect key="frame" x="22" y="9" width="42" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="⏯"/>
@@ -33,7 +33,7 @@
                                     <action selector="paused:" destination="BV1-FR-VrT" eventType="valueChanged" id="rGd-8b-amY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsq-SK-VtI">
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsq-SK-VtI">
                                 <rect key="frame" x="78" y="9" width="50" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="🔄"/>
@@ -53,20 +53,20 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="FJX-Ku-2ra"/>
-                                <exclude reference="Sm5-U8-bfX"/>
                                 <exclude reference="ciJ-nS-3Th"/>
                                 <exclude reference="qMN-vV-Ubc"/>
+                                <exclude reference="FJX-Ku-2ra"/>
+                                <exclude reference="Sm5-U8-bfX"/>
                                 <exclude reference="Jc0-1t-uqL"/>
                                 <exclude reference="bse-T4-I6a"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="FJX-Ku-2ra"/>
-                                <include reference="Sm5-U8-bfX"/>
                                 <include reference="ciJ-nS-3Th"/>
                                 <include reference="qMN-vV-Ubc"/>
+                                <include reference="FJX-Ku-2ra"/>
+                                <include reference="Sm5-U8-bfX"/>
                                 <include reference="Jc0-1t-uqL"/>
                                 <include reference="bse-T4-I6a"/>
                             </mask>

@@ -11,7 +11,6 @@
 		651306661D23DF5F00E539EE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306651D23DF5F00E539EE /* GameScene.swift */; };
 		651306681D23DF5F00E539EE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306671D23DF5F00E539EE /* GameViewController.swift */; };
 		6513066B1D23DF5F00E539EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651306691D23DF5F00E539EE /* Main.storyboard */; };
-		651306701D23DF5F00E539EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6513066E1D23DF5F00E539EE /* LaunchScreen.storyboard */; };
 		6540BF081D245B80006B8CBE /* bensound-littleidea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6540BF071D245B80006B8CBE /* bensound-littleidea.mp3 */; };
 		6540BF0A1D2475FC006B8CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6540BF091D2475FC006B8CBE /* Assets.xcassets */; };
 		657C5E861D23E4A4005CF4A5 /* Bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E801D23E4A4005CF4A5 /* Bird1.png */; };
@@ -52,7 +51,6 @@
 		651306651D23DF5F00E539EE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		651306671D23DF5F00E539EE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6513066A1D23DF5F00E539EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6513066F1D23DF5F00E539EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		651306711D23DF5F00E539EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		651306761D23DF5F00E539EE /* FlappyBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		651306811D23DF5F00E539EE /* FlappyBirdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyBirdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +127,6 @@
 				651306691D23DF5F00E539EE /* Main.storyboard */,
 				657C5EA71D244913005CF4A5 /* GameScene.sks */,
 				6540BF091D2475FC006B8CBE /* Assets.xcassets */,
-				6513066E1D23DF5F00E539EE /* LaunchScreen.storyboard */,
 				651306711D23DF5F00E539EE /* Info.plist */,
 			);
 			path = FlappyBird;
@@ -269,7 +266,6 @@
 			files = (
 				657C5E871D23E4A4005CF4A5 /* Bird2.png in Resources */,
 				657C5E981D243C6C005CF4A5 /* collectcoin.wav in Resources */,
-				651306701D23DF5F00E539EE /* LaunchScreen.storyboard in Resources */,
 				657C5EA21D2440CD005CF4A5 /* appicon60x60@2.png in Resources */,
 				657C5E931D240A99005CF4A5 /* pipe2.png in Resources */,
 				657C5E861D23E4A4005CF4A5 /* Bird1.png in Resources */,
@@ -350,14 +346,6 @@
 				6513066A1D23DF5F00E539EE /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6513066E1D23DF5F00E539EE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6513066F1D23DF5F00E539EE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
