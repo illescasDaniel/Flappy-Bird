@@ -11,39 +11,11 @@
 		651306661D23DF5F00E539EE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306651D23DF5F00E539EE /* GameScene.swift */; };
 		651306681D23DF5F00E539EE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306671D23DF5F00E539EE /* GameViewController.swift */; };
 		6513066B1D23DF5F00E539EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651306691D23DF5F00E539EE /* Main.storyboard */; };
-		6540BF081D245B80006B8CBE /* bensound-littleidea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6540BF071D245B80006B8CBE /* bensound-littleidea.mp3 */; };
-		6540BF0A1D2475FC006B8CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6540BF091D2475FC006B8CBE /* Assets.xcassets */; };
-		657C5E861D23E4A4005CF4A5 /* Bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E801D23E4A4005CF4A5 /* Bird1.png */; };
-		657C5E871D23E4A4005CF4A5 /* Bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E811D23E4A4005CF4A5 /* Bird2.png */; };
-		657C5E881D23E4A4005CF4A5 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E821D23E4A4005CF4A5 /* Ground.png */; };
-		657C5E8B1D23E4A4005CF4A5 /* Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E851D23E4A4005CF4A5 /* Sky.png */; };
-		657C5E921D240A99005CF4A5 /* pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E901D240A99005CF4A5 /* pipe1.png */; };
-		657C5E931D240A99005CF4A5 /* pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E911D240A99005CF4A5 /* pipe2.png */; };
-		657C5E981D243C6C005CF4A5 /* collectcoin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E971D243C6C005CF4A5 /* collectcoin.wav */; };
-		657C5E9D1D243F72005CF4A5 /* appIconx2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E9B1D243F72005CF4A5 /* appIconx2.png */; };
-		657C5E9E1D243F72005CF4A5 /* appIconx3.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5E9C1D243F72005CF4A5 /* appIconx3.png */; };
-		657C5EA21D2440CD005CF4A5 /* appicon60x60@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5EA11D2440CD005CF4A5 /* appicon60x60@2.png */; };
-		657C5EA41D2440FA005CF4A5 /* appicon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5EA31D2440FA005CF4A5 /* appicon76x76.png */; };
-		657C5EA61D244132005CF4A5 /* appicon76x76@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657C5EA51D244132005CF4A5 /* appicon76x76@2.png */; };
 		657C5EA81D244913005CF4A5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 657C5EA71D244913005CF4A5 /* GameScene.sks */; };
+		65C090481D54DE93000C6C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C090471D54DE93000C6C96 /* Assets.xcassets */; };
+		65C0904E1D54E10F000C6C96 /* bensound-littleidea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */; };
+		65C0904F1D54E10F000C6C96 /* collectcoin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 65C0904D1D54E10F000C6C96 /* collectcoin.wav */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		651306771D23DF5F00E539EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 651306561D23DF5E00E539EE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6513065D1D23DF5E00E539EE;
-			remoteInfo = FlappyBird;
-		};
-		651306821D23DF5F00E539EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 651306561D23DF5E00E539EE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6513065D1D23DF5E00E539EE;
-			remoteInfo = FlappyBird;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6513065E1D23DF5F00E539EE /* FlappyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,42 +24,15 @@
 		651306671D23DF5F00E539EE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6513066A1D23DF5F00E539EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		651306711D23DF5F00E539EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		651306761D23DF5F00E539EE /* FlappyBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		651306811D23DF5F00E539EE /* FlappyBirdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyBirdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6540BF071D245B80006B8CBE /* bensound-littleidea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-littleidea.mp3"; sourceTree = "<group>"; };
-		6540BF091D2475FC006B8CBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6540BF0B1D247759006B8CBE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		657C5E801D23E4A4005CF4A5 /* Bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird1.png; sourceTree = "<group>"; };
-		657C5E811D23E4A4005CF4A5 /* Bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird2.png; sourceTree = "<group>"; };
-		657C5E821D23E4A4005CF4A5 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ground.png; sourceTree = "<group>"; };
-		657C5E851D23E4A4005CF4A5 /* Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sky.png; sourceTree = "<group>"; };
-		657C5E901D240A99005CF4A5 /* pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe1.png; sourceTree = "<group>"; };
-		657C5E911D240A99005CF4A5 /* pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe2.png; sourceTree = "<group>"; };
-		657C5E971D243C6C005CF4A5 /* collectcoin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collectcoin.wav; sourceTree = "<group>"; };
-		657C5E9B1D243F72005CF4A5 /* appIconx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIconx2.png; sourceTree = "<group>"; };
-		657C5E9C1D243F72005CF4A5 /* appIconx3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIconx3.png; sourceTree = "<group>"; };
-		657C5EA11D2440CD005CF4A5 /* appicon60x60@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon60x60@2.png"; sourceTree = "<group>"; };
-		657C5EA31D2440FA005CF4A5 /* appicon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon76x76.png; sourceTree = "<group>"; };
-		657C5EA51D244132005CF4A5 /* appicon76x76@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon76x76@2.png"; sourceTree = "<group>"; };
 		657C5EA71D244913005CF4A5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		65C090471D54DE93000C6C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-littleidea.mp3"; sourceTree = "<group>"; };
+		65C0904D1D54E10F000C6C96 /* collectcoin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collectcoin.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6513065B1D23DF5E00E539EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		651306731D23DF5F00E539EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6513067E1D23DF5F00E539EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -110,8 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				6513065E1D23DF5F00E539EE /* FlappyBird.app */,
-				651306761D23DF5F00E539EE /* FlappyBirdTests.xctest */,
-				651306811D23DF5F00E539EE /* FlappyBirdUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,44 +62,25 @@
 		651306601D23DF5F00E539EE /* FlappyBird */ = {
 			isa = PBXGroup;
 			children = (
-				657C5E941D243ACF005CF4A5 /* Música */,
-				657C5E7F1D23E4A4005CF4A5 /* Imágenes */,
-				651306611D23DF5F00E539EE /* AppDelegate.swift */,
 				651306651D23DF5F00E539EE /* GameScene.swift */,
 				651306671D23DF5F00E539EE /* GameViewController.swift */,
 				651306691D23DF5F00E539EE /* Main.storyboard */,
 				657C5EA71D244913005CF4A5 /* GameScene.sks */,
-				6540BF091D2475FC006B8CBE /* Assets.xcassets */,
+				65C090471D54DE93000C6C96 /* Assets.xcassets */,
+				651306611D23DF5F00E539EE /* AppDelegate.swift */,
+				65C090491D54E05F000C6C96 /* Sonidos */,
 				651306711D23DF5F00E539EE /* Info.plist */,
 			);
 			path = FlappyBird;
 			sourceTree = "<group>";
 		};
-		657C5E7F1D23E4A4005CF4A5 /* Imágenes */ = {
+		65C090491D54E05F000C6C96 /* Sonidos */ = {
 			isa = PBXGroup;
 			children = (
-				657C5EA31D2440FA005CF4A5 /* appicon76x76.png */,
-				657C5EA51D244132005CF4A5 /* appicon76x76@2.png */,
-				657C5EA11D2440CD005CF4A5 /* appicon60x60@2.png */,
-				657C5E9B1D243F72005CF4A5 /* appIconx2.png */,
-				657C5E9C1D243F72005CF4A5 /* appIconx3.png */,
-				657C5E901D240A99005CF4A5 /* pipe1.png */,
-				657C5E911D240A99005CF4A5 /* pipe2.png */,
-				657C5E801D23E4A4005CF4A5 /* Bird1.png */,
-				657C5E811D23E4A4005CF4A5 /* Bird2.png */,
-				657C5E821D23E4A4005CF4A5 /* Ground.png */,
-				657C5E851D23E4A4005CF4A5 /* Sky.png */,
+				65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */,
+				65C0904D1D54E10F000C6C96 /* collectcoin.wav */,
 			);
-			path = "Imágenes";
-			sourceTree = "<group>";
-		};
-		657C5E941D243ACF005CF4A5 /* Música */ = {
-			isa = PBXGroup;
-			children = (
-				657C5E971D243C6C005CF4A5 /* collectcoin.wav */,
-				6540BF071D245B80006B8CBE /* bensound-littleidea.mp3 */,
-			);
-			path = "Música";
+			name = Sonidos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,42 +103,6 @@
 			productReference = 6513065E1D23DF5F00E539EE /* FlappyBird.app */;
 			productType = "com.apple.product-type.application";
 		};
-		651306751D23DF5F00E539EE /* FlappyBirdTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6513068D1D23DF5F00E539EE /* Build configuration list for PBXNativeTarget "FlappyBirdTests" */;
-			buildPhases = (
-				651306721D23DF5F00E539EE /* Sources */,
-				651306731D23DF5F00E539EE /* Frameworks */,
-				651306741D23DF5F00E539EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				651306781D23DF5F00E539EE /* PBXTargetDependency */,
-			);
-			name = FlappyBirdTests;
-			productName = FlappyBirdTests;
-			productReference = 651306761D23DF5F00E539EE /* FlappyBirdTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		651306801D23DF5F00E539EE /* FlappyBirdUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 651306901D23DF5F00E539EE /* Build configuration list for PBXNativeTarget "FlappyBirdUITests" */;
-			buildPhases = (
-				6513067D1D23DF5F00E539EE /* Sources */,
-				6513067E1D23DF5F00E539EE /* Frameworks */,
-				6513067F1D23DF5F00E539EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				651306831D23DF5F00E539EE /* PBXTargetDependency */,
-			);
-			name = FlappyBirdUITests;
-			productName = FlappyBirdUITests;
-			productReference = 651306811D23DF5F00E539EE /* FlappyBirdUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,14 +116,6 @@
 					6513065D1D23DF5E00E539EE = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = PRK6268SLD;
-					};
-					651306751D23DF5F00E539EE = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 6513065D1D23DF5E00E539EE;
-					};
-					651306801D23DF5F00E539EE = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 6513065D1D23DF5E00E539EE;
 					};
 				};
 			};
@@ -253,8 +133,6 @@
 			projectRoot = "";
 			targets = (
 				6513065D1D23DF5E00E539EE /* FlappyBird */,
-				651306751D23DF5F00E539EE /* FlappyBirdTests */,
-				651306801D23DF5F00E539EE /* FlappyBirdUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,36 +142,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				657C5E871D23E4A4005CF4A5 /* Bird2.png in Resources */,
-				657C5E981D243C6C005CF4A5 /* collectcoin.wav in Resources */,
-				657C5EA21D2440CD005CF4A5 /* appicon60x60@2.png in Resources */,
-				657C5E931D240A99005CF4A5 /* pipe2.png in Resources */,
-				657C5E861D23E4A4005CF4A5 /* Bird1.png in Resources */,
-				6540BF0A1D2475FC006B8CBE /* Assets.xcassets in Resources */,
-				657C5E921D240A99005CF4A5 /* pipe1.png in Resources */,
-				657C5E9E1D243F72005CF4A5 /* appIconx3.png in Resources */,
 				6513066B1D23DF5F00E539EE /* Main.storyboard in Resources */,
-				657C5E881D23E4A4005CF4A5 /* Ground.png in Resources */,
-				657C5E9D1D243F72005CF4A5 /* appIconx2.png in Resources */,
+				65C0904F1D54E10F000C6C96 /* collectcoin.wav in Resources */,
+				65C0904E1D54E10F000C6C96 /* bensound-littleidea.mp3 in Resources */,
 				657C5EA81D244913005CF4A5 /* GameScene.sks in Resources */,
-				657C5E8B1D23E4A4005CF4A5 /* Sky.png in Resources */,
-				6540BF081D245B80006B8CBE /* bensound-littleidea.mp3 in Resources */,
-				657C5EA61D244132005CF4A5 /* appicon76x76@2.png in Resources */,
-				657C5EA41D2440FA005CF4A5 /* appicon76x76.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		651306741D23DF5F00E539EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6513067F1D23DF5F00E539EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				65C090481D54DE93000C6C96 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,34 +163,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		651306721D23DF5F00E539EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6513067D1D23DF5F00E539EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		651306781D23DF5F00E539EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6513065D1D23DF5E00E539EE /* FlappyBird */;
-			targetProxy = 651306771D23DF5F00E539EE /* PBXContainerItemProxy */;
-		};
-		651306831D23DF5F00E539EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6513065D1D23DF5E00E539EE /* FlappyBird */;
-			targetProxy = 651306821D23DF5F00E539EE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		651306691D23DF5F00E539EE /* Main.storyboard */ = {
@@ -464,54 +290,6 @@
 			};
 			name = Release;
 		};
-		6513068E1D23DF5F00E539EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = FlappyBirdTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.FlappyBirdTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlappyBird.app/FlappyBird";
-			};
-			name = Debug;
-		};
-		6513068F1D23DF5F00E539EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = FlappyBirdTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.FlappyBirdTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlappyBird.app/FlappyBird";
-			};
-			name = Release;
-		};
-		651306911D23DF5F00E539EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = FlappyBirdUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.FlappyBirdUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = FlappyBird;
-			};
-			name = Debug;
-		};
-		651306921D23DF5F00E539EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = FlappyBirdUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.FlappyBirdUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = FlappyBird;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -529,24 +307,6 @@
 			buildConfigurations = (
 				6513068B1D23DF5F00E539EE /* Debug */,
 				6513068C1D23DF5F00E539EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6513068D1D23DF5F00E539EE /* Build configuration list for PBXNativeTarget "FlappyBirdTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6513068E1D23DF5F00E539EE /* Debug */,
-				6513068F1D23DF5F00E539EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		651306901D23DF5F00E539EE /* Build configuration list for PBXNativeTarget "FlappyBirdUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				651306911D23DF5F00E539EE /* Debug */,
-				651306921D23DF5F00E539EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

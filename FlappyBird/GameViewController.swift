@@ -1,88 +1,60 @@
-//
-//  GameViewController.swift
-//  FlappyBird
-//
-//  Created by Daniel Illescas Romero on 29/06/16.
-//  Copyright (c) 2016 Daniel Illescas Romero. All rights reserved.
-//
-
 import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-	
-	
+
 	@IBOutlet weak var mySwitch: UISwitch!
-	
-	let scene = GameScene(fileNamed:"GameScene")
+
+	let scene = GameScene(fileNamed: "GameScene")
 	var skView = SKView()
-	var paused = 0
+	var paused = false
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 
-            // Configure the view.
-			skView = self.view as! SKView
-            skView.showsFPS = false
-            skView.showsNodeCount = false
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene!.scaleMode = .AspectFill
-            
-            skView.presentScene(scene)
-    }
-	
+		// Configure the view.
+		skView = self.view as! SKView
+		skView.showsFPS = false
+		skView.showsNodeCount = false
 
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
+		/* Sprite Kit applies additional optimizations to improve rendering performance */
+		skView.ignoresSiblingOrder = true
 
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
-        } else {
-            return .All
-        }
-    }
+		/* Set the scale mode to scale to fit the window */
+		scene!.scaleMode = .AspectFill
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
+		skView.presentScene(scene)
+	}
 
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-	
+	override func prefersStatusBarHidden() -> Bool {
+		return true
+	}
+
 	@IBAction func Pause(sender: UIButton) {
-		
-		if paused==1 {
+
+		if paused {
 			skView.paused = false
 			scene?.musicaFondo!.play()
 		}
-		else{
+		else {
 			skView.paused = true
-			scene?.musicaFondo!.stop()
+			scene?.musicaFondo!.pause()
 		}
-		
-		paused = (paused + 1) % 2
+
+		paused = paused ? false : true
 	}
-	
+
 	@IBAction func restart(sender: UIButton) {
 		scene?.reiniciarEscena()
 	}
-	
+
 	@IBAction func mute(sender: AnyObject) {
-		
+
 		if mySwitch.on {
 			scene?.musicaFondo!.play()
 		}
-		else{
+		else {
 			scene?.musicaFondo!.stop()
 		}
 	}
-	
 }
