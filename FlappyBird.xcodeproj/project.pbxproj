@@ -16,6 +16,7 @@
 		65C090481D54DE93000C6C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C090471D54DE93000C6C96 /* Assets.xcassets */; };
 		65C0904E1D54E10F000C6C96 /* bensound-littleidea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */; };
 		65C0904F1D54E10F000C6C96 /* collectcoin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 65C0904D1D54E10F000C6C96 /* collectcoin.wav */; };
+		65E42517201CB2B10018D1B0 /* AVAudioPlayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E42516201CB2B10018D1B0 /* AVAudioPlayer+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		65C090471D54DE93000C6C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-littleidea.mp3"; sourceTree = "<group>"; };
 		65C0904D1D54E10F000C6C96 /* collectcoin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collectcoin.wav; sourceTree = "<group>"; };
+		65E42516201CB2B10018D1B0 /* AVAudioPlayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioPlayer+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,26 +66,35 @@
 		651306601D23DF5F00E539EE /* FlappyBird */ = {
 			isa = PBXGroup;
 			children = (
+				65E42518201CB2E70018D1B0 /* Extensions */,
 				651306651D23DF5F00E539EE /* GameScene.swift */,
-				65229540201CA68700667979 /* FeedbackGenerator.swift */,
 				651306671D23DF5F00E539EE /* GameViewController.swift */,
 				651306691D23DF5F00E539EE /* Main.storyboard */,
 				657C5EA71D244913005CF4A5 /* GameScene.sks */,
 				65C090471D54DE93000C6C96 /* Assets.xcassets */,
 				651306611D23DF5F00E539EE /* AppDelegate.swift */,
-				65C090491D54E05F000C6C96 /* Sonidos */,
+				65C090491D54E05F000C6C96 /* Sounds */,
 				651306711D23DF5F00E539EE /* Info.plist */,
 			);
 			path = FlappyBird;
 			sourceTree = "<group>";
 		};
-		65C090491D54E05F000C6C96 /* Sonidos */ = {
+		65C090491D54E05F000C6C96 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
 				65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */,
 				65C0904D1D54E10F000C6C96 /* collectcoin.wav */,
 			);
-			name = Sonidos;
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		65E42518201CB2E70018D1B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				65229540201CA68700667979 /* FeedbackGenerator.swift */,
+				65E42516201CB2B10018D1B0 /* AVAudioPlayer+Extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E42517201CB2B10018D1B0 /* AVAudioPlayer+Extension.swift in Sources */,
 				651306661D23DF5F00E539EE /* GameScene.swift in Sources */,
 				651306681D23DF5F00E539EE /* GameViewController.swift in Sources */,
 				65229541201CA68700667979 /* FeedbackGenerator.swift in Sources */,

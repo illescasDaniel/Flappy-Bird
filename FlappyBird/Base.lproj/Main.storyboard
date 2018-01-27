@@ -54,9 +54,9 @@
                         <viewLayoutGuide key="safeArea" id="Mkm-W3-yeC"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="FJX-Ku-2ra"/>
                                 <exclude reference="ciJ-nS-3Th"/>
                                 <exclude reference="qMN-vV-Ubc"/>
-                                <exclude reference="FJX-Ku-2ra"/>
                                 <exclude reference="Sm5-U8-bfX"/>
                                 <exclude reference="Jc0-1t-uqL"/>
                                 <exclude reference="bse-T4-I6a"/>
@@ -64,9 +64,9 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="FJX-Ku-2ra"/>
                                 <include reference="ciJ-nS-3Th"/>
                                 <include reference="qMN-vV-Ubc"/>
-                                <include reference="FJX-Ku-2ra"/>
                                 <include reference="Sm5-U8-bfX"/>
                                 <include reference="Jc0-1t-uqL"/>
                                 <include reference="bse-T4-I6a"/>
@@ -75,6 +75,7 @@
                     </view>
                     <connections>
                         <outlet property="mySwitch" destination="XQh-OL-hsY" id="lUJ-HE-cQ0"/>
+                        <outlet property="skView" destination="3se-qz-xqx" id="Hea-BL-xe0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

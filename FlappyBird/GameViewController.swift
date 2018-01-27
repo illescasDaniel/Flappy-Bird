@@ -6,13 +6,13 @@ class GameViewController: UIViewController {
 	@IBOutlet weak var mySwitch: UISwitch!
 
 	let scene = GameScene(fileNamed: "GameScene")
-	var skView = SKView()
+	@IBOutlet var skView: SKView!
+	
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		// Configure the view.
-		skView = self.view as! SKView
 		skView.showsFPS = false
 		skView.showsNodeCount = false
 
@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
 	
 	@IBAction func restart(_ sender: UIButton) {
 		FeedbackGenerator.impactOcurredWith(style: .light)
-		scene?.reiniciarEscena()
+		scene?.restartScene()
 	}
 	
 	@IBAction func pause(_ sender: UIButton) {
@@ -43,19 +43,19 @@ class GameViewController: UIViewController {
 			skView.isPaused = false
 			
 			if mySwitch.isOn {
-				scene?.musicaFondo?.play()
+				scene?.backgroundMusic?.play()
 			}
 		}
 		else {
 			skView.isPaused = true
-			scene?.musicaFondo?.pause()
+			scene?.backgroundMusic?.pause()
 		}
 	}
 	
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		if self.skView.isPaused {
 			self.skView.isPaused = false
-			scene?.musicaFondo?.play()
+			scene?.backgroundMusic?.play()
 		}
 	}
 	
@@ -63,11 +63,11 @@ class GameViewController: UIViewController {
 		
 		if mySwitch.isOn {
 			if mySwitch.isOn {
-				scene?.musicaFondo?.play()
+				scene?.backgroundMusic?.play()
 			}
 		}
 		else {
-			scene?.musicaFondo?.stop()
+			scene?.backgroundMusic?.stop()
 		}
 	}
 }
