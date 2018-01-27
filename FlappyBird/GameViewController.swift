@@ -7,7 +7,6 @@ class GameViewController: UIViewController {
 
 	let scene = GameScene(fileNamed: "GameScene")
 	var skView = SKView()
-	var paused = false
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,40 +20,54 @@ class GameViewController: UIViewController {
 		skView.ignoresSiblingOrder = true
 
 		/* Set the scale mode to scale to fit the window */
-		scene!.scaleMode = .AspectFill
+		scene?.scaleMode = .aspectFill
 
 		skView.presentScene(scene)
 	}
 
-	override func prefersStatusBarHidden() -> Bool {
+	override var prefersStatusBarHidden: Bool {
 		return true
 	}
-
-	@IBAction func Pause(sender: UIButton) {
-
-		if paused {
-			skView.paused = false
-			scene?.musicaFondo!.play()
-		}
-		else {
-			skView.paused = true
-			scene?.musicaFondo!.pause()
-		}
-
-		paused = paused ? false : true
-	}
-
-	@IBAction func restart(sender: UIButton) {
+	
+	@IBAction func restart(_ sender: UIButton) {
+		FeedbackGenerator.impactOcurredWith(style: .light)
 		scene?.reiniciarEscena()
 	}
-
-	@IBAction func mute(sender: AnyObject) {
-
-		if mySwitch.on {
-			scene?.musicaFondo!.play()
+	
+	@IBAction func pause(_ sender: UIButton) {
+		
+		FeedbackGenerator.impactOcurredWith(style: .light)
+		
+		if skView.isPaused {
+		
+			skView.isPaused = false
+			
+			if mySwitch.isOn {
+				scene?.musicaFondo?.play()
+			}
 		}
 		else {
-			scene?.musicaFondo!.stop()
+			skView.isPaused = true
+			scene?.musicaFondo?.pause()
+		}
+	}
+	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		if self.skView.isPaused {
+			self.skView.isPaused = false
+			scene?.musicaFondo?.play()
+		}
+	}
+	
+	@IBAction func mute(_ sender: UISwitch) {
+		
+		if mySwitch.isOn {
+			if mySwitch.isOn {
+				scene?.musicaFondo?.play()
+			}
+		}
+		else {
+			scene?.musicaFondo?.stop()
 		}
 	}
 }
