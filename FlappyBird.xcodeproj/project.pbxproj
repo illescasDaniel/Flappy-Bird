@@ -13,6 +13,8 @@
 		6513066B1D23DF5F00E539EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651306691D23DF5F00E539EE /* Main.storyboard */; };
 		65229541201CA68700667979 /* FeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65229540201CA68700667979 /* FeedbackGenerator.swift */; };
 		657C5EA81D244913005CF4A5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 657C5EA71D244913005CF4A5 /* GameScene.sks */; };
+		65A190E8201CBA920047EA1F /* screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A190E6201CBA920047EA1F /* screenshot2.png */; };
+		65A190E9201CBA920047EA1F /* screenshot1.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A190E7201CBA920047EA1F /* screenshot1.png */; };
 		65C090481D54DE93000C6C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C090471D54DE93000C6C96 /* Assets.xcassets */; };
 		65C0904E1D54E10F000C6C96 /* bensound-littleidea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */; };
 		65C0904F1D54E10F000C6C96 /* collectcoin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 65C0904D1D54E10F000C6C96 /* collectcoin.wav */; };
@@ -29,6 +31,8 @@
 		65229540201CA68700667979 /* FeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGenerator.swift; sourceTree = "<group>"; };
 		6540BF0B1D247759006B8CBE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		657C5EA71D244913005CF4A5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		65A190E6201CBA920047EA1F /* screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot2.png; sourceTree = "<group>"; };
+		65A190E7201CBA920047EA1F /* screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot1.png; sourceTree = "<group>"; };
 		65C090471D54DE93000C6C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-littleidea.mp3"; sourceTree = "<group>"; };
 		65C0904D1D54E10F000C6C96 /* collectcoin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collectcoin.wav; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		65E42519201CB5EF0018D1B0 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
+				65A190E7201CBA920047EA1F /* screenshot1.png */,
+				65A190E6201CBA920047EA1F /* screenshot2.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -164,11 +170,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A190E8201CBA920047EA1F /* screenshot2.png in Resources */,
 				6513066B1D23DF5F00E539EE /* Main.storyboard in Resources */,
 				65C0904F1D54E10F000C6C96 /* collectcoin.wav in Resources */,
 				65C0904E1D54E10F000C6C96 /* bensound-littleidea.mp3 in Resources */,
 				657C5EA81D244913005CF4A5 /* GameScene.sks in Resources */,
 				65C090481D54DE93000C6C96 /* Assets.xcassets in Resources */,
+				65A190E9201CBA920047EA1F /* screenshot1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
