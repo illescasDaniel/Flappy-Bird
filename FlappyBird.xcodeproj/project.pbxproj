@@ -33,8 +33,6 @@
 		65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-littleidea.mp3"; sourceTree = "<group>"; };
 		65C0904D1D54E10F000C6C96 /* collectcoin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collectcoin.wav; sourceTree = "<group>"; };
 		65E42516201CB2B10018D1B0 /* AVAudioPlayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioPlayer+Extension.swift"; sourceTree = "<group>"; };
-		65E4251A201CB60D0018D1B0 /* screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot1.png; sourceTree = "<group>"; };
-		65E4251B201CB60D0018D1B0 /* screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +101,6 @@
 		65E42519201CB5EF0018D1B0 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				65E4251A201CB60D0018D1B0 /* screenshot1.png */,
-				65E4251B201CB60D0018D1B0 /* screenshot2.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
