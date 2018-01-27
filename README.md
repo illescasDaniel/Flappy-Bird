@@ -1,6 +1,6 @@
 # Flappy-Bird
 
-Flappy Bird remake in Swift 4.0 for iOS
+Flappy Bird remake in Swift 4.0 for iOS. Compatible with iOS 11+ and iPhone X.
 
 Download .ipa: https://github.com/illescasDaniel/Flappy-Bird/releases
 
