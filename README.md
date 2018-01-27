@@ -4,10 +4,11 @@
 
 Flappy Bird remake in Swift 4.0 for iOS
 
-- Based on this tutorial:
+#### Credits:
+
 http://jotajotavm.com/curso-programar-juegos-para-ios-con-swift-01-introduccion.html
 
-- Sounds:
+#### Sounds:
 - Music: http://www.bensound.com http://www.bensound.com/royalty-free-music/track/little-idea
 - Coin: https://www.freesound.org/people/bradwesson/sounds/135936/
 
