@@ -2,10 +2,10 @@
 
 Flappy Bird remake in Swift 4.0 for iOS
 
+Download .ipa: https://github.com/illescasDaniel/Flappy-Bird/releases
 
 ## Screenshots:
-<img src="Screenshots/screenshot1.png" width="200">
-<img src="Screenshots/screenshot2.png" width="200">
+<img src="Screenshots/screenshot1.png" width="200"> <img src="Screenshots/screenshot2.png" width="200">
 
 ## Credits:
 

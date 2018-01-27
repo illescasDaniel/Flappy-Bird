@@ -17,8 +17,6 @@
 		65C0904E1D54E10F000C6C96 /* bensound-littleidea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */; };
 		65C0904F1D54E10F000C6C96 /* collectcoin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 65C0904D1D54E10F000C6C96 /* collectcoin.wav */; };
 		65E42517201CB2B10018D1B0 /* AVAudioPlayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E42516201CB2B10018D1B0 /* AVAudioPlayer+Extension.swift */; };
-		65E4251C201CB60D0018D1B0 /* screenshot1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 65E4251A201CB60D0018D1B0 /* screenshot1.PNG */; };
-		65E4251D201CB60D0018D1B0 /* screenshot2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 65E4251B201CB60D0018D1B0 /* screenshot2.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +33,8 @@
 		65C0904C1D54E10F000C6C96 /* bensound-littleidea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-littleidea.mp3"; sourceTree = "<group>"; };
 		65C0904D1D54E10F000C6C96 /* collectcoin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collectcoin.wav; sourceTree = "<group>"; };
 		65E42516201CB2B10018D1B0 /* AVAudioPlayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioPlayer+Extension.swift"; sourceTree = "<group>"; };
-		65E4251A201CB60D0018D1B0 /* screenshot1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot1.PNG; sourceTree = "<group>"; };
-		65E4251B201CB60D0018D1B0 /* screenshot2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot2.PNG; sourceTree = "<group>"; };
+		65E4251A201CB60D0018D1B0 /* screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot1.png; sourceTree = "<group>"; };
+		65E4251B201CB60D0018D1B0 /* screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +103,8 @@
 		65E42519201CB5EF0018D1B0 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				65E4251A201CB60D0018D1B0 /* screenshot1.PNG */,
-				65E4251B201CB60D0018D1B0 /* screenshot2.PNG */,
+				65E4251A201CB60D0018D1B0 /* screenshot1.png */,
+				65E4251B201CB60D0018D1B0 /* screenshot2.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -170,11 +168,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65E4251D201CB60D0018D1B0 /* screenshot2.PNG in Resources */,
 				6513066B1D23DF5F00E539EE /* Main.storyboard in Resources */,
 				65C0904F1D54E10F000C6C96 /* collectcoin.wav in Resources */,
 				65C0904E1D54E10F000C6C96 /* bensound-littleidea.mp3 in Resources */,
-				65E4251C201CB60D0018D1B0 /* screenshot1.PNG in Resources */,
 				657C5EA81D244913005CF4A5 /* GameScene.sks in Resources */,
 				65C090481D54DE93000C6C96 /* Assets.xcassets in Resources */,
 			);
@@ -317,6 +313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PRK6268SLD;
 				INFOPLIST_FILE = FlappyBird/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -333,6 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PRK6268SLD;
 				INFOPLIST_FILE = FlappyBird/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
